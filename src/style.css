@@ -1,16 +1,36 @@
 #todo-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #todo-list li {
-    margin-bottom: 10px;
-    background-color: #f0f0f0;
-    padding: 10px;
-  }
-  
-  #todo-list li.completed {
-    text-decoration: line-through;
-    color: gray;
-  }
-  
+  list-style-type: none;
+  padding: 0;
+}
+
+#todo-list li {
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+#todo-list li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.todo-item {
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.delete-icon {
+  color: red;
+}
+
+.delete-icon::before {
+  content: "\f2ed";
+}
+
+.delete-icon + .menu-icon {
+  display: none;
+}
