@@ -7,46 +7,58 @@
   margin-bottom: 10px;
   background-color: #f0f0f0;
   padding: 10px;
+  position: relative;
 }
 
 #todo-list li.completed {
   text-decoration: line-through;
   color: gray;
 }
+
 .todo-item {
   position: relative;
 }
+
 #task-input {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: solid silver;
-    border-width: 1px;
-    padding: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: solid silver;
+  border-width: 1px;
+  padding: 4px;
 }
+
 #new-task {
-    border: none;
-
+  border: none;
 }
 
+.checkbox {
+  margin-right: 10px;
+}
 
-.menu-icon {
+.menu-bar {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
   cursor: pointer;
-  font-size: 30px;
+  font-size: 20px;
 }
+
 .delete-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
   color: rgb(0, 0, 0);
   font-size: 24px;
 }
 
 .delete-icon::before {
-  content: "\fed";
+  content: "\f2ed";
 }
 
-.delete-icon + .menu-icon {
+.delete-icon + .menu-bar {
   display: none;
 }

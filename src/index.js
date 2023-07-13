@@ -9,25 +9,45 @@ function populateTodoList() {
 
   tasks.forEach(task => {
     const listItem = document.createElement('li');
-    listItem.textContent = task.description;
     listItem.className = 'todo-item'; // Add class for positioning
 
     if (task.completed) {
       listItem.classList.add('completed');
     }
 
-    const menuIcon = document.createElement('span');
-    menuIcon.className = 'menu-icon';
-    menuIcon.innerHTML = '&#8942;';
-    menuIcon.addEventListener('click', () => {
-      if (menuIcon.classList.contains('delete-icon')) {
-        removeTask(task);
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.className = 'checkbox';
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        listItem.classList.add('completed');
+        task.completed = true;
       } else {
-        menuIcon.classList.add('delete-icon');
+        listItem.classList.remove('completed');
+        task.completed = false;
       }
     });
 
-    listItem.appendChild(menuIcon);
+    const menuBar = document.createElement('i');
+    menuBar.className = 'fas fa-ellipsis-v menu-bar';
+    menuBar.addEventListener('click', () => {
+      menuBar.style.display = 'none';
+      deleteIcon.style.display = 'inline-block';
+    });
+
+    const deleteIcon = document.createElement('i');
+    deleteIcon.className = 'fas fa-trash delete-icon';
+    deleteIcon.addEventListener('click', () => {
+      removeTask(task);
+    });
+
+    const taskDescription = document.createElement('span');
+    taskDescription.textContent = task.description;
+
+    listItem.appendChild(checkbox);
+    listItem.appendChild(menuBar);
+    listItem.appendChild(deleteIcon);
+    listItem.appendChild(taskDescription);
     todoList.appendChild(listItem);
   });
 }
