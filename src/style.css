@@ -16,19 +16,35 @@
 .todo-item {
   position: relative;
 }
+#task-input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid silver;
+    border-width: 1px;
+    padding: 4px;
+}
+#new-task {
+    border: none;
+
+}
+
 
 .menu-icon {
   position: absolute;
   top: 0;
   right: 0;
   cursor: pointer;
+  font-size: 30px;
 }
 .delete-icon {
-  color: red;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
 }
 
 .delete-icon::before {
-  content: "\f2ed";
+  content: "\fed";
 }
 
 .delete-icon + .menu-icon {
