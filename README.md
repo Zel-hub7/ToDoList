@@ -110,7 +110,7 @@ To run the linters, run `npx hint .` and `npx stylelint "**/*.{css,scss}"` or `n
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Meryem Sanem Küçükbayram**
+👤 **Zelalem Yohannes *
 
 - GitHub: [@Zelalem](https://github.com/Zel-hub7)
 
