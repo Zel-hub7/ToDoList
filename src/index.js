@@ -16,18 +16,31 @@ const tasks = [
       index: 2,
     },
   ];
+  tasks.sort((a,b) => a.index - b.index);
   function populateTodoList() {
     const todoList = document.getElementById('todo-list');
   
-    tasks.forEach(task => {
-      const listItem = document.createElement('li');
-      const checkbox = document.createElement('input');
-      checkbox.type = 'checkbox';
-      checkbox.className = 'checkbox';
-      listItem.appendChild(checkbox);
-      listItem.innerHTML += task.description;
-      todoList.appendChild(listItem);
-    });
+    for(let i = 0; i <tasks.length; i++) {
+        const { index, description, completed } = tasks[i];
+        todoList.innerHTML += `
+        
+       
+        <li id="L${index}" class ="common">
+        <div class = "list_container">
+        <div class = "list2">
+        <input for ="P${index}" id="${index}" type="checkbox" ${
+      completed && 'checked'
+    }  class ="checkbox">
+        <p id ="P${index}" class="li-p">${description}</p>
+        </div>
+        <button id="edit-remove${index}"  class="btn dots list-item">
+         <i class="fa fa-ellipsis-v"></i>
+        </button>
+        </li>
+        </div>
+      `;
+
+    }
   }
   
   
