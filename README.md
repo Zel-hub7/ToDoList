@@ -5,11 +5,11 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [To Do List ](#about-project)
+- [To Do List ](#to-do-list-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-    - [Live Demo](#live-demo-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -17,7 +17,6 @@
     - [Usage](#usage)
     - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -57,7 +56,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- The link for To Do List project [Live Demo Link](https://meryemsanem.github.io/To-Do-List/dist/)
+- comming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,7 +80,8 @@ Clone this repository to your desired folder:
 ```sh
   cd desktop
 
-  git clone git@github.com:meryemsanem/To-Do-List.git
+  git clone https://github.com/Zel-hub7/ToDoList.git
+
 
 ```
 
@@ -91,7 +91,7 @@ Install this project with:
 
 ```sh
 
-  cd To-Do-List
+  cd ToDoList
 
   npm install
 ```
@@ -112,9 +112,7 @@ To run the linters, run `npx hint .` and `npx stylelint "**/*.{css,scss}"` or `n
 
 👤 **Meryem Sanem Küçükbayram**
 
-- GitHub: [@meryemsanem](https://github.com/meryemsanem)
-- Twitter: [@msanemkckbayram](https://twitter.com/twitterhandle)
-- LinkedIn: [Meryem Sanem Küçükbayram](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Zelalem](https://github.com/Zel-hub7)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
