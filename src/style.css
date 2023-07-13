@@ -44,6 +44,7 @@
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 20px;
+  visibility: visible;
 }
 
 .delete-icon {
@@ -51,14 +52,24 @@
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  color: rgb(0, 0, 0);
+  display: none;
+  color: black;
   font-size: 24px;
 }
 
-.delete-icon::before {
+.delete-icon:before {
   content: "\f2ed";
 }
 
-.delete-icon + .menu-bar {
-  display: none;
+#clear-completed {
+  margin-top: 10px;
+  text-align: right;
+}
+
+#clear-button {
+  background-color: #e9e9e9;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }

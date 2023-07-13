@@ -26,6 +26,7 @@ function populateTodoList() {
         listItem.classList.remove('completed');
         task.completed = false;
       }
+      updateClearButtonVisibility();
     });
 
     const menuBar = document.createElement('i');
@@ -38,7 +39,7 @@ function populateTodoList() {
     const deleteIcon = document.createElement('i');
     deleteIcon.className = 'fas fa-trash delete-icon';
     deleteIcon.addEventListener('click', () => {
-      removeTask(task);
+      deleteTask(task);
     });
 
     const taskDescription = document.createElement('span');
@@ -66,22 +67,47 @@ function addTask(event) {
 
       tasks.push(newTask);
       populateTodoList();
+      updateClearButtonVisibility();
       newTaskInput.value = '';
     }
   }
 }
 
-function removeTask(task) {
+function deleteTask(task) {
   const taskIndex = tasks.indexOf(task);
   if (taskIndex > -1) {
     tasks.splice(taskIndex, 1);
     populateTodoList();
+    updateClearButtonVisibility();
   }
 }
 
-// Event listener for the "Enter" key
-const newTaskInput = document.getElementById('new-task');
-newTaskInput.addEventListener('keydown', addTask);
+function clearCompletedTasks() {
+  tasks.forEach(task => {
+    if (task.completed) {
+      deleteTask(task);
+    }
+  });
+}
 
-// Call the function to populate the initial To-Do list
-populateTodoList();
+function updateClearButtonVisibility() {
+  const clearCompletedDiv = document.getElementById('clear-completed');
+  const completedTasks = tasks.filter(task => task.completed);
+
+  if (completedTasks.length > 0) {
+    clearCompletedDiv.style.display = 'block';
+  } else {
+    clearCompletedDiv.style.display = 'none';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const newTaskInput = document.getElementById('new-task');
+  newTaskInput.addEventListener('keydown', addTask);
+
+  const clearButton = document.getElementById('clear-button');
+  clearButton.addEventListener('click', clearCompletedTasks);
+
+  populateTodoList();
+  updateClearButtonVisibility();
+});
