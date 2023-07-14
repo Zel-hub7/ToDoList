@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/32baa8b9a9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To Do List</title>
+    <link rel="stylesheet" type=text/html href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    
-    <script src="https://kit.fontawesome.com/32baa8b9a9.js" crossorigin="anonymous"></script>
-</head>
-
-<body class="body">
-
-    <section class="section">
-    <div id="app">
-        <div id="title">
-            <h1 id = "today">Today's To Do</h1>
-            <button class="btn first">
-                <i class="fa-sharp fa-solid fa-rotate"></i>
-            </button>
-        </div>
-
-        <div id="inp">
-            <input type="text" id="new-task" placeholder="Enter a new task">
-
-            <button class="btn second">
-                <i class="fa-solid fa-arrow-turn-down fa-rotate-90"></i>
-            </button>
-
-        </div>
-
-        <div class = "container">
-            <ul id="todo-list">
-
-                <!-- The dynamically created list items will appear here -->
-            </ul>
-
-            <button id = "button" type="button">
-                Clear all completed
-            </button>
-    
-        </div>
-        
-    </div>
-    </section>
-    <script src="bundle.js"></script>
-</body>
-
+  <body>
+    <main id="container" class = "section">
+      <div class="common">
+        <p id="title" class="p">Today's To Do</p>
+        <button class="btn first">
+          <i class="fa-sharp fa-solid fa-rotate"></i>
+        </button>
+      </div>
+      <div id = "inp" class="common">
+        <input
+          id="input"
+          type="text"
+          class="textInput"
+          placeholder="Add to your list..."
+        />
+        <button class="btn second">
+          <i class="fa-solid fa-arrow-turn-down fa-rotate-90"></i>
+        </button>
+      </div>
+      <ul id="list"></ul>
+      <button class="btnComplete">
+        <p>Clear all completed</p>
+      </button>
+    </main>
+  </body>
 </html>

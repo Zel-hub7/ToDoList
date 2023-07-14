@@ -1,80 +1,125 @@
 * {
-  list-style: none;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.section {
-  border: solid silver;
-  border-width: 1px;
-  box-shadow: 3px 3px 3px 3px silver;
+body {
+  background-color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 5%;
 }
 
-#title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 3px;
-  border-bottom: solid silver 1px;
-}
-
-#today {
-  font-size: 120%;
-}
-
-#title button {
-  background-color: rgb(255, 255, 255);
-  border: none;
-  font-size: 15px;
-}
-
-#inp {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: solid silver 2px;
-}
-
-#inp input {
-  border: none;
-}
-
-#inp button {
-  border: none;
-  background-color: white;
-}
-
-ul {
+.container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+  margin-top: 15rem;
+}
+
+.p {
+  font-size: 22px;
+}
+
+.common {
+  height: 40px;
   width: 100%;
+  margin-bottom: 2px;
+  background-color: #fff;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .checkbox {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
-#button {
-  width: 100%;
+.btn {
+  border: none;
+  background-color: #fff;
   padding: 10px;
-  border: none;
+  font-size: 15px;
+  color: #9e9b9b;
+  cursor: pointer;
 }
 
-.list-item {
-  background-color: white;
-  border: none;
+.btn:hover {
+  color: black;
+  font-size: 18px;
 }
 
-.list_container {
+.btnComplete {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 6px;
-  border-bottom: solid silver 1px;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  background-color: gainsboro;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  color: #696969;
+  font-size: 1.25rem;
 }
 
-.list2 {
-  display: flex;
-  flex-direction: row;
+.btnComplete:hover {
+  text-decoration: underline;
+  color: red;
+  font-size: 1.3rem;
+}
+
+.textInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+#list {
+  width: 100%;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+input[type='text']:focus::placeholder {
+  color: transparent;
+}
+
+.dots {
+  font-size: 20px;
+}
+
+.dots:hover {
+  font-size: 24px;
+}
+
+.li-p {
+  width: 100%;
+  outline: none;
+}
+
+.checkbox:checked + .li-p {
+  text-decoration: line-through;
+  color: #696969;
+}
+
+.newButton {
+  background-color: #ffe6ee;
+  border: none;
+  font-size: 20px;
+}
+
+.newButton:hover {
+  font-size: 25px;
+}
+
+.checkbox:checked {
+  margin-left: 5px;
 }
