@@ -117,6 +117,12 @@ To run the linters, run `npx hint .` and `npx stylelint "**/*.{css,scss}"` or `n
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🔭 Future Features <a name="future-features">
+**Task Reminders** I planned to implement a reminder system that allows users to set reminders for their tasks. This can be in the form of push notifications or email reminders, ensuring that users stay on top of their tasks and deadlines.
+**Attaching notes** I planned to add a feature that Enables users to attach files or add notes to their tasks
+- **Task prioritization** I have planned to ennable users to prioritize their tasks by adding priority levels such as high, medium, and low.
+
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
