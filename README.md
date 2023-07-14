@@ -47,8 +47,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- The user can add a new to do list.
-- The user can remove any of the list items.
+- Task Management: Organize and manage your tasks efficiently with a user-friendly interface. Add, update, and delete tasks seamlessly to keep track of your to-do list.
+- Priority and Due Dates: Set priorities and due dates for your tasks to effectively manage your time and stay on top of your deadlines. Easily prioritize tasks based on importance and schedule them accordingly.
+- Collaboration and Sharing: Collaborate with others by sharing your task lists. Invite team members, friends, or family to collaborate on tasks, enabling seamless coordination and delegation of responsibilities.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
