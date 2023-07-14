@@ -1,5 +1,5 @@
 import './style.css';
-import addTrash from './functions.js';
+import addTrash from './Modules/functions.js';
 
 const clearButton = document.querySelector('.btnComplete');
 
