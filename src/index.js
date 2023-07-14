@@ -1,4 +1,12 @@
-import "./style.css";
+import './style.css';
+import addTrash from './functions.js';
+
+
+const clearButton = document.querySelector('.btnComplete');
+
+const input = document.getElementById('input');
+
+const target = document.getElementById('list');
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -7,12 +15,9 @@ function saveToLocalStorage(data) {
   tasks.push(data);
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
-const input = document.getElementById("new-task");
 
-tasks.sort((a, b) => a.index - b.index);
-
-input.addEventListener("keyup", (event) => {
-  if (event.key === "Enter") {
+input.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
     const inputValue = input.value;
     const newObj = {
       description: inputValue,
@@ -21,34 +26,48 @@ input.addEventListener("keyup", (event) => {
     };
     saveToLocalStorage(newObj);
     window.location.reload();
-    input.value = "";
+    input.value = '';
   }
 });
-console.log(tasks)
-function populateTodoList() {
-  const todoList = document.getElementById("todo-list");
 
-  for (let i = 0; i < tasks.length; i += 1) {
-    const { index, description, completed } = tasks[i];
-    todoList.innerHTML += `
-        
-       
-        <li id="L${index}" class ="common">
-        <div class = "list_container">
-        <div class = "list2">
-        <input for ="P${index}" id="${index}" type="checkbox" ${
-      completed && "checked"
-    }  class ="checkbox">
-        <p id ="P${index}" class="li-p">${description}</p>
-        </div>
-        <button id="edit-remove${index}"  class="btn dots list-item">
-         <i class="fa fa-ellipsis-v"></i>
-        </button>
-        </li>
-        </div>
-      `;
-  }
+for (let i = 0; i < tasks.length; i += 1) {
+  const { index, description, completed } = tasks[i];
+  target.innerHTML += `
+      <li id="L${index}" class ="common">
+      <input for ="P${index}" id="${index}" type="checkbox" ${
+    completed && 'checked'
+  }  class ="checkbox">
+      <p id ="P${index}" class="li-p">${description}</p>
+      <button id="edit-remove${index}"  class="btn dots list-item">
+       <i class="fa fa-ellipsis-v"></i>
+      </button>
+      </li>
+    `;
 }
 
-// Call the function to populate the list on page load
-populateTodoList();
+const deleteBtn = document.querySelectorAll('.list-item');
+deleteBtn.forEach((button) => {
+  button.addEventListener('click', addTrash);
+});
+
+const checkboxs = document.querySelectorAll('.checkbox');
+checkboxs.forEach((el) => {
+  el.addEventListener('click', () => {
+    const list = JSON.parse(localStorage.getItem('tasks'));
+    const findIndex = list.findIndex(
+      (listEl) => listEl.index.toString() === el.id.toString()
+    );
+
+    list[findIndex].completed = !list[findIndex].completed;
+    localStorage.setItem('tasks', JSON.stringify(list));
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  });
+});
+
+clearButton.addEventListener('click', () => {
+  const list = JSON.parse(localStorage.getItem('tasks'));
+  const filteredItems = list.filter((el) => el.completed === false);
+
+  localStorage.setItem('tasks', JSON.stringify(filteredItems));
+  window.location.reload();
+});
