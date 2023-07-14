@@ -12,7 +12,7 @@ function deleteList() {
     tasks[i].index = i + 1;
   }
   localStorage.setItem('tasks', JSON.stringify(tasks));
- 
+  window.location.reload();
 }
 
 export default function addTrash(event) {
