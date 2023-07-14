@@ -1,25 +1,32 @@
-import './style.css';
+import "./style.css";
 
-const tasks = [
-  {
-    description: 'Task 1',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Task 2',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Task 3',
-    completed: false,
-    index: 2,
-  },
-];
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+function saveToLocalStorage(data) {
+  tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.push(data);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+const input = document.getElementById("new-task");
+
 tasks.sort((a, b) => a.index - b.index);
+
+input.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    const inputValue = input.value;
+    const newObj = {
+      description: inputValue,
+      completed: false,
+      index: tasks.length + 1,
+    };
+    saveToLocalStorage(newObj);
+    window.location.reload();
+    input.value = "";
+  }
+});
+console.log(tasks)
 function populateTodoList() {
-  const todoList = document.getElementById('todo-list');
+  const todoList = document.getElementById("todo-list");
 
   for (let i = 0; i < tasks.length; i += 1) {
     const { index, description, completed } = tasks[i];
@@ -30,8 +37,8 @@ function populateTodoList() {
         <div class = "list_container">
         <div class = "list2">
         <input for ="P${index}" id="${index}" type="checkbox" ${
-  completed && 'checked'
-}  class ="checkbox">
+      completed && "checked"
+    }  class ="checkbox">
         <p id ="P${index}" class="li-p">${description}</p>
         </div>
         <button id="edit-remove${index}"  class="btn dots list-item">
