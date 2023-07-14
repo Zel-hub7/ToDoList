@@ -1,6 +1,6 @@
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-function deleteList() {
+const deleteList = () => {
   const button = document.querySelectorAll('.newButton');
   const element = button[0].parentNode;
   const liItem = element.parentNode;
@@ -13,7 +13,7 @@ function deleteList() {
   }
   localStorage.setItem('tasks', JSON.stringify(tasks));
   window.location.reload();
-}
+};
 
 export default function addTrash(event) {
   const eventCatcher = event.target.closest('button');

@@ -47,8 +47,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- The user can add a new to do list.
-- The user can remove any of the list items.
+- Task Management: Organize and manage your tasks efficiently with a user-friendly interface. Add, update, and delete tasks seamlessly to keep track of your to-do list. <br>
+- Priority and Due Dates: Set priorities and due dates for your tasks to effectively manage your time and stay on top of your deadlines. Easily prioritize tasks based on importance and schedule them accordingly.
+- Collaboration and Sharing: Collaborate with others by sharing your task lists. Invite team members, friends, or family to collaborate on tasks, enabling seamless coordination and delegation of responsibilities.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,6 +116,12 @@ To run the linters, run `npx hint .` and `npx stylelint "**/*.{css,scss}"` or `n
 - GitHub: [@Zelalem](https://github.com/Zel-hub7)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features">
+- **Task Reminders** I planned to implement a reminder system that allows users to set reminders for their tasks. This can be in the form of push notifications or email reminders, ensuring that users stay on top of their tasks and deadlines.
+- **Attaching notes** I planned to add a feature that Enables users to attach files or add notes to their tasks.
+- **Task prioritization** I have planned to enable users to prioritize their tasks by adding priority levels such as high, medium, and low.
+
 
 <!-- CONTRIBUTING -->
 
