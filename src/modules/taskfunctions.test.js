@@ -3,7 +3,7 @@ import {
   addTask,
   removeTasks,
   taskListArray,
-} from './taskFunctions';
+} from './taskFunctions.js';
 
 // Set up jsdom
 import 'jsdom-global/register'; // Update the import path according to your file structure
