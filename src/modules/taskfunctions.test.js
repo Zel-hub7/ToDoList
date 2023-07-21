@@ -6,7 +6,7 @@ import {
 } from './taskFunctions.js';
 
 // Set up jsdom
-import 'jsdom-global/register'; // Update the import path according to your file structure
+import 'jsdom-global/register.js'; // Update the import path according to your file structure
 
 // Mock localStorage
 const localStorageMock = (() => {
