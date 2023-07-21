@@ -17,5 +17,5 @@
     ],
     "rules": {
       "import/no-mutable-exports": "error"
-    }
+    } 
   }
