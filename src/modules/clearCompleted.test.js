@@ -1,5 +1,6 @@
-import 'jest-localstorage-mock';
-
+/* eslint-disable */
+import 'jest-localstorage-mock.js';
+/* eslint-enable */
 import clearCompletedTasks from './clearTask.js';
 import { taskListArray, saveTasktoLocal, removeTasks } from './taskFunctions.js';
 

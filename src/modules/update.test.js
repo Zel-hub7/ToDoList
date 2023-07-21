@@ -1,5 +1,5 @@
 // taskfunctions.test.js
-import { updateIndexes } from './taskFunctions'; // Update the import path according to your file structure
+import { updateIndexes } from './taskFunctions.js'; // Update the import path according to your file structure
 
 describe('updateIndexes', () => {
   test('should update the index property of each task in the taskListArray', () => {
