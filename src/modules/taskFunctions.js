@@ -1,5 +1,8 @@
 // taskfunctions.js
-let taskListArray = [];
+/* eslint-disable */
+export let taskListArray = [];
+
+/* eslint-enable */
 
 // Check if localStorage is available (only in browser environment)
 if (typeof localStorage !== 'undefined') {
@@ -43,7 +46,6 @@ const addTask = (title) => {
 };
 
 export {
-  taskListArray,
   saveTasktoLocal,
   removeTasks,
   editTaskDescription,
