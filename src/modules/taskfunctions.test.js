@@ -6,7 +6,7 @@ import {
     updateIndexes,
     editTaskDescription,
     taskListArray,
-  } from './taskfunctions'; // Update the import path according to your file structure
+  } from './taskFunctions'; // Update the import path according to your file structure
   
   // Mock localStorage
   const localStorageMock = (() => {
