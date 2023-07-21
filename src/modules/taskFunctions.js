@@ -1,7 +1,16 @@
-const taskListArray = JSON.parse(localStorage.getItem('taskItems')) || [];
+// taskfunctions.js
+let taskListArray = [];
+
+// Check if localStorage is available (only in browser environment)
+if (typeof localStorage !== 'undefined') {
+  taskListArray = JSON.parse(localStorage.getItem('taskItems')) || [];
+}
 
 const saveTasktoLocal = () => {
-  localStorage.setItem('taskItems', JSON.stringify(taskListArray));
+  // Check if localStorage is available (only in browser environment)
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('taskItems', JSON.stringify(taskListArray));
+  }
 };
 
 const updateIndexes = () => {
@@ -34,5 +43,10 @@ const addTask = (title) => {
 };
 
 export {
-  taskListArray, saveTasktoLocal, removeTasks, editTaskDescription, addTask, updateIndexes,
+  taskListArray,
+  saveTasktoLocal,
+  removeTasks,
+  editTaskDescription,
+  addTask,
+  updateIndexes,
 };
