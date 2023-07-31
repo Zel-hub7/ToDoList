@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- comming soon
+<a href ="https://zel-hub7.github.io/ToDoList/">Live demo</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
